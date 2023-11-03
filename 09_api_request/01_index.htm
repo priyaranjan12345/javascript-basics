@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121;">
+
+</body>
+<script>
+    const url = "https://randomuser.me/api/"
+    const request = new XMLHttpRequest()
+    request.open('GET', url)
+
+    request.onreadystatechange = function() {
+        console.log(request.readyState);
+
+        if(request.readyState == 4) {
+            const response = JSON.parse(this.response)
+            console.log(response.results);
+        }
+
+    }
+
+    request.send()
+</script>
+
+</html>

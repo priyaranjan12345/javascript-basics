@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Calls Example</title>
+</head>
+
+<body>
+    <script>
+        const apiUrl = 'https://lo0dfkjkt9.execute-api.ap-south-1.amazonaws.com/dev';
+
+        function makeGetRequest() {
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                    document.getElementById('response').innerText = 'An error occurred.';
+                });
+        }
+
+        function makePostRequest() {
+            const postData = {
+                name: 'John Doe',
+                email: 'johndoe@example.com'
+            };
+
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(postData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                    document.getElementById('response').innerText = 'An error occurred.';
+                });
+        }
+
+        function makePutRequest() {
+            const putData = {
+                name: 'Jane Doe',
+                email: 'janedoe@example.com'
+            };
+
+            fetch(apiUrl, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(putData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                    document.getElementById('response').innerText = 'An error occurred.';
+                });
+        }
+
+        function makeDeleteRequest() {
+            fetch(apiUrl, {
+                method: 'DELETE'
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                    document.getElementById('response').innerText = 'An error occurred.';
+                });
+        }
+
+    </script>
+    <h1>API Calls Example</h1>
+    <button onclick="makeGetRequest()">GET Request</button>
+    <button onclick="makePostRequest()">POST Request</button>
+    <button onclick="makePutRequest()">PUT Request</button>
+    <button onclick="makeDeleteRequest()">DELETE Request</button>
+    <div id="response"></div>
+</body>
+
+</html>

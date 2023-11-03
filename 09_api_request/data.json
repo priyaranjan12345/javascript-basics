@@ -1,0 +1,66 @@
+{
+    "results": [
+      {
+        "gender": "male",
+        "name": {
+          "title": "Mr",
+          "first": "Harry",
+          "last": "Day"
+        },
+        "location": {
+          "street": {
+            "number": 4962,
+            "name": "Cackson St"
+          },
+          "city": "Mildura",
+          "state": "Tasmania",
+          "country": "Australia",
+          "postcode": 1641,
+          "coordinates": {
+            "latitude": "-87.9216",
+            "longitude": "-149.1570"
+          },
+          "timezone": {
+            "offset": "-12:00",
+            "description": "Eniwetok, Kwajalein"
+          }
+        },
+        "email": "harry.day@example.com",
+        "login": {
+          "uuid": "630719a6-06ac-4a0f-987a-29ed03161da7",
+          "username": "heavyostrich251",
+          "password": "lian",
+          "salt": "ayOXPc9K",
+          "md5": "80a12df90c0ede5641b1a6c74de627fa",
+          "sha1": "c440b00a9990a02b89f55e6b136e7edcd1814061",
+          "sha256": "09ab9154a0e08c3579bbb1fe83f72c9c822d3992428d9b3e93f30ab347da2270"
+        },
+        "dob": {
+          "date": "1976-09-28T16:57:53.068Z",
+          "age": 47
+        },
+        "registered": {
+          "date": "2020-10-26T16:44:04.618Z",
+          "age": 3
+        },
+        "phone": "00-2130-8648",
+        "cell": "0451-445-523",
+        "id": {
+          "name": "TFN",
+          "value": "144870939"
+        },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/men/84.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/84.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/84.jpg"
+        },
+        "nat": "AU"
+      }
+    ],
+    "info": {
+      "seed": "eeeac99fd18908ce",
+      "results": 1,
+      "page": 1,
+      "version": "1.4"
+    }
+  }
