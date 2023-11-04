@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121;">
+
+    <div>
+        <button id="button1"> Button - 1 </button>
+        <button id="button2"> Button - 2 </button>
+    </div>
+
+</body>
+<script>
+    // lexical scope
+
+    // function init() {
+    //     let name = "Mozila Fire Fox"
+    //     function display() {
+    //         let number = 1234
+    //         console.log(name);
+    //     }
+    //     function inner() {}
+    //     display()
+    //     inner()
+    // }
+
+    // init()
+
+    // function make() {
+    //     const name = "Mozilla"
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+
+    //     return displayName
+    // }
+
+    // const makeDispalyName = make()
+    // makeDispalyName()
+
+    // 1
+
+    // document.getElementById("button1").onclick = function() {
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+
+    // document.getElementById("button2").onclick = function() {
+    //     document.body.style.backgroundColor = 'red'
+    // }
+
+    // 2 e.g of lexical scope
+    function clickHadler(color) {
+        // will not work
+        // document.body.style.backgroundColor = color
+        
+        // to make it workable return method
+        // because oclick expect a function
+        function changeColor() {
+            document.body.style.backgroundColor = color
+        }
+
+        return changeColor
+    }
+
+    document.getElementById("button1").onclick = clickHadler('blue')
+    document.getElementById("button2").onclick = clickHadler('green')
+
+</script>
+
+</html>
