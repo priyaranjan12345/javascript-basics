@@ -23,11 +23,11 @@
 
         function makePostRequest() {
             const postData = {
-                name: 'John Doe',
-                email: 'johndoe@example.com'
+                email: 'priyaranjanmantri@gmail.com',
+                password: 'Test@1234'
             };
 
-            fetch(apiUrl, {
+            fetch("http://localhost:8080/todo-api/v1/login", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

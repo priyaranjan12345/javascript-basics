@@ -26,12 +26,12 @@ JsUser.age = 20
 console.log(JsUser)
 
 // add functions to object
-JsUser.onSuccess = function() {
+JsUser.onSuccess = function () {
     console.log("Success")
 }
 
-JsUser.printName = function() {
-    console.log("Name: "+ this.name)
+JsUser.printName = function () {
+    console.log("Name: " + this.name)
 }
 
 console.log(JsUser.onSuccess())
